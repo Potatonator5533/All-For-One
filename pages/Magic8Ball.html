@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../dist/output.css" rel="stylesheet">
+    <link rel="stylesheet" href="../src/style.css">
+    <title>All for One: Magic 8 Ball</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=B612&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Nav Bar -->
+    <nav class="customBg">
+        <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+            <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
+                <span class="self-center font50 text-wrap font-semibold whitespace-nowrap dark:text-white">Magic 8 Ball</span>
+            </a>
+            <button data-collapse-toggle="navbar-hamburger" type="button" style="width: 80px; height: 52px;"
+                class="inline-flex items-center justify-center p-2 w-10 h-10 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
+                aria-controls="navbar-hamburger" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none"
+                    style="width: auto; height: 40px;" viewBox="0 0 17 14">
+                    <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M1 1h15M1 7h15M1 13h15" />
+                </svg>
+            </button>
+            <div class="hidden w-full" id="navbar-hamburger">
+                <ul
+                    class="flex flex-col font-semibold mt-4 rounded-lg bg-gray-50 dark:bg-gray-800 dark:border-gray-700">
+                    <li>
+                        <a href="../index.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Home
+                            Page</a>
+                    </li>
+                    <li>
+                        <a href="./SayHello.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Say
+                            Hello</a>
+                    </li>
+                    <li>
+                        <a href="./Adding.html"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Adding</a>
+                    </li>
+                    <li>
+                        <a href="./AskingQuestions.html"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Asking Questions</a>
+                    </li>
+                    <li>
+                        <a href="./GreaterOrLess.html"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Greater
+                            or Less</a>
+                    </li>
+                    <li>
+                        <a href="./Madlib.html"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Madlib</a>
+                    </li>
+                    <li>
+                        <a href="./OddOrEven.html"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Odd
+                            or even</a>
+                    </li>
+                    <li>
+                        <a href="./ReverseIt(alphaNumeric).html"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Reverse It (alphaNumeric)</a>
+                    </li>
+                    <li>
+                        <a href="./ReverseIt(numbersOnly).html"
+                        class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Reverse It (numbersOnly)</a>
+                    </li>
+                    <li>
+                        <a href="./Magic8Ball.html"
+                        class="block py-2 px-3 text-white bg-blue-700 rounded dark:bg-blue-600 font30"
+                        aria-current="page">Magic 8 Ball</a>
+                    </li>
+                    <li>
+                        <a href="./RestaurantPicker.html"
+                            class="block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white font30">Restaurant
+                            Picker</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Body -->
+    <br><br>
+    <div class="flex justify-center">
+        <div class="grid grid-cols-1 gap-8 w-4/5 font30">
+            <div class="flex justify-center px-5 py-2.5 m-2">Give the computer a question and it will respond back with an answer that will probably best suit your question.</div>
+            <div class="flex justify-center px-5 py-2.5 m-2"><input id="magic8BallInput" type="text" placeholder="Enter Question Here" class="rounded-md w-96"></div>
+            <div class="flex justify-center px-5 py-2.5 m-2">
+                <button type="button" id="Submit"
+                    class="customBg hover:bg-gray-400 font-medium rounded-lg px-5 m-2">Submit</button>
+            </div>
+            <div class="flex justify-center px-5 py-2.5 m-2" id="magic8BallOutput">Output Here</div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="../node_modules/flowbite/dist/flowbite.min.js"></script>
+    <script src="../script/app.js"></script>
+</body>
+
+</html>
